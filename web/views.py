@@ -4,24 +4,24 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'web/home.html')
+    return render(request, 'web/home.html', {'activate' : 'home'})
 
 
 def about(request):
-    return render(request, 'web/about.html')
+    return render(request, 'web/about.html',  { 'activate' : 'about'})
 
 
 def contact(request):
-    return render(request, 'web/contact.html')
+    return render(request, 'web/contact.html',  {'activate' : 'contact'})
 
 
 def faqs(request):
-    return render(request, 'web/faqs.html')
+    return render(request, 'web/faqs.html',  {'activate' : 'faqs'})
 
 
 def services(request):
-    return render(request, 'web/services.html')
+    return render(request, 'web/services.html',  {'activate' : 'services'})
 
 
 def blog(request):
-    return render(request, 'web/blog.html')
+    return render(request, 'web/blog.html',  {'activate' : 'blog'})

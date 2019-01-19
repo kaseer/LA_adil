@@ -33,8 +33,8 @@
 					   		<div class="menu-wrapper float-left">
 					   			<nav id="mega-menu-holder" class="clearfix">
 								   <ul class="clearfix">
-									    <li><a href="{% url 'home' %}">Home</a></li>
-									    <li><a href="{% url 'services' %}">Services</a>
+									    <li {% if activate == 'home' %}class="active"{% endif %}><a href="{% url 'home' %}">Home</a></li>
+									    <li {% if activate == 'services' %}class="active"{% endif %}><a href="{% url 'services' %}">Services</a>
 									    	<ul class="dropdown">
 									    		<li><a href="about.html">service one</a></li>
 									            <li><a href="#">service two</a>
@@ -45,10 +45,10 @@
 									    		</li>
 									       </ul>
 									    </li>
-									    <li><a href="{% url 'contact' %}">Contact Us</a></li>
-									    <li><a href="{% url 'blog' %}">Blog</a></li>
-									    <li class="active"><a href="{% url 'about' %}">About US</a></li>
-                                       <li class="active"><a href="{% url 'faqs' %}">Faqs</a></li>
+									    <li {% if activate == 'contact' %}class="active"{% endif %}><a href="{% url 'contact' %}">Contact Us</a></li>
+									    <li {% if activate == 'blog' %}class="active"{% endif %}><a href="{% url 'blog' %}">Blog</a></li>
+									    <li {% if activate == 'about' %}class="active"{% endif %}><a href="{% url 'about' %}">About US</a></li>
+                                       <li {% if activate == 'faqs' %}class="active"{% endif %}><a href="{% url 'faqs' %}">Faqs</a></li>
 								   </ul>
 								</nav> <!-- /#mega-menu-holder -->
 					   		</div> <!-- /.menu-wrapper -->
