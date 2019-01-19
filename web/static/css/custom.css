@@ -1,0 +1,10 @@
+#mega-menu-holder{
+    display: flex !important;
+}
+
+@media (min-width: 1200px){
+    .container {
+    max-width: 70% !important;
+}
+}
+
