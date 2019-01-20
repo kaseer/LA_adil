@@ -7,20 +7,20 @@
 			<header class="header-one">
 				<div class="top-header">
 					<div class="container clearfix">
-						<div class="logo float-left"><a href="{% url 'home' %}"><img src="{% static 'images/logo/leedslogo.png' %}" alt=""></a></div>
+						<div class="logo float-left"><a href="{% url 'home' %}"><img src="{% static 'images/logo/logo-la.png' %}" alt=""></a></div>
 						<div class="address-wrapper float-right">
 							<ul>
 								<li class="address">
 									<i class="icon flaticon-placeholder"></i>
 									<h6>Address:</h6>
-									<p>2A0, Queenstown St, USA.</p>
+									<p>20 St, Leeds, UK.</p>
 								</li>
 								<li class="address">
 									<i class="icon flaticon-multimedia"></i>
-									<h6>Mail us:</h6>
-									<p>supporthere@mail.com</p>
+									<h6>Email us:</h6>
+									<p>info@leedsaccountants.com</p>
 								</li>
-								<li class="quotes"><a href="#">GET A QUOTES</a></li>
+								<li class="quotes"><a href="#">Consult us Now</a></li>
 							</ul>
 						</div> <!-- /.address-wrapper -->
 					</div> <!-- /.container -->
@@ -64,7 +64,26 @@
 										</ul>
 					   				</li>
 					   				<li class="cart-icon">
-					   					<a href="#"><i class="flaticon-tool"></i> <span>2</span></a>
+					   					{% if True %}
+
+                                            <li class="search-option user-profile">
+					   					<div class="dropdown">
+					   						<button type="button" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i></button>
+											<div class="dropdown-menu">
+												<div class="profile-menu">
+                                                        <ul>
+                                                            <li><a href=""><i class="fa fa-tasks"></i> Profile</a></li>
+                                                            <li><a href=""><i class="fa fa-lock"></i> Change Password</a></li>
+                                                            <li><a href=""><i class="fa fa-sign-out"></i> Logout</a></li>
+                                                        </ul>
+                                                </div>
+											</div>
+					   					</div>
+					   				</li>
+                                        {% else %}
+                                            <a href="#">Login</a>
+					   					{% endif %}
+
 					   				</li>
 					   				<li class="search-option">
 					   					<div class="dropdown">

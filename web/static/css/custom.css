@@ -1,10 +1,53 @@
-#mega-menu-holder{
+.theme-menu-wrapper.fixed{
+     background-image: linear-gradient(to right, #201362 , #414297) !important;
+}
+.bg-wrapper{
+    border-radius: 5px !important;
+     background-image: linear-gradient(to right, #201362 , #414297) !important;
+}
+
+.user-profile .dropdown-menu{
+    height: auto !important;
+    background: transparent !important;
+}
+
+.profile-menu,
+.profile-menu ul,
+.profile-menu ul li,
+.profile-menu ul li a{
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1px !important;
+}
+.profile-menu{
+
+}
+.profile-menu ul{
     display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
 }
 
-@media (min-width: 1200px){
+.profile-menu ul li:not(:last-of-type){
+    border-bottom: 0.6px solid #efefef;
+}
+.profile-menu ul li a{
+    width: 100%;
+    background: rgba(1, 8, 50, .9);
+    color: #fff;
+    font-size: 1.1em;
+    padding: 1.2rem 1rem !important;
+}
+.profile-menu ul li a:hover{
+    background: #fff;
+    color: #0E0E0E;
+}
+.profile-menu ul li a i{
+    margin-right: 1rem;
+    font-size: 1.3em;
+}
+@media (min-width: 1200px) {
     .container {
-    max-width: 70% !important;
+        max-width: 80% !important;
+    }
 }
-}
-
