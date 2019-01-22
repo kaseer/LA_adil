@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c1aab69-7390-47a6-98cb-3c9e5347cde5" name="Default Changelist" comment="This is code by system to github">
-      <change afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leeds/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/leeds/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leeds/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/leeds/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/web/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/web/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/registration/logged_out.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/registration/logged_out.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +24,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user/templates/registration/login.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="88">
@@ -39,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/user/templates/registration/logged_out.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+            <state>
+              <caret column="24" selection-start-column="24" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -179,17 +173,17 @@
         <option value="$PROJECT_DIR$/user/views.py" />
         <option value="$PROJECT_DIR$/user/urls.py" />
         <option value="$PROJECT_DIR$/user/templates/account_base.html" />
-        <option value="$PROJECT_DIR$/user/templates/registration/logged_out.html" />
         <option value="$PROJECT_DIR$/user/templates/registration/password_reset_confirm.html" />
         <option value="$PROJECT_DIR$/user/templates/registration/password_reset_email.html" />
         <option value="$PROJECT_DIR$/user/templates/registration/password_reset_form.html" />
         <option value="$PROJECT_DIR$/user/templates/registration/password_reset_done.html" />
         <option value="$PROJECT_DIR$/user/templates/registration/password_change_form.html" />
         <option value="$PROJECT_DIR$/user/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/user/templates/registration/logged_out.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="666" />
     <option name="y" value="270" />
     <option name="width" value="1131" />
@@ -313,7 +307,7 @@
       <workItem from="1547933518541" duration="506000" />
       <workItem from="1547968505125" duration="21806000" />
       <workItem from="1548010530533" duration="2451000" />
-      <workItem from="1548183948918" duration="1347000" />
+      <workItem from="1548183948918" duration="1765000" />
     </task>
     <task id="LOCAL-00001" summary="This is code by system to github">
       <created>1547754083013</created>
@@ -326,18 +320,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56323000" />
+    <option name="totallyTimeSpent" value="56741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15951417" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24777327" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2895204" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.47069272" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -346,7 +340,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.29252437" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3232682" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3232682" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -540,13 +534,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/templates/registration/logged_out.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user/templates/registration/password_reset_complete.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -592,6 +579,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/templates/registration/logged_out.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="24" selection-start-column="24" selection-end-column="24" />
         </state>
       </provider>
     </entry>
