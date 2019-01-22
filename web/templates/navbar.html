@@ -7,7 +7,7 @@
 			<header class="header-one">
 				<div class="top-header">
 					<div class="container clearfix">
-						<div class="logo float-left"><a href="{% url 'home' %}"><img src="{% static 'images/logo/logo-la.png' %}" alt=""></a></div>
+						<div class="logo float-left"><a href="{% url 'home' %}"><img src="{% static 'images/logo/leedslogo.png' %}" alt=""></a></div>
 						<div class="address-wrapper float-right">
 							<ul>
 								<li class="address">
@@ -55,14 +55,15 @@
 
 					   		<div class="right-widget float-right">
 					   			<ul>
+					   				<!--
 					   				<li class="social-icon">
 					   					<ul>
 											<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 											<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 											<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-											<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
 										</ul>
 					   				</li>
+					   				-->
 					   				<li class="cart-icon">
 					   					{% if True %}
 
@@ -72,9 +73,14 @@
 											<div class="dropdown-menu">
 												<div class="profile-menu">
                                                         <ul>
-                                                            <li><a href=""><i class="fa fa-tasks"></i> Profile</a></li>
-                                                            <li><a href=""><i class="fa fa-lock"></i> Change Password</a></li>
-                                                            <li><a href=""><i class="fa fa-sign-out"></i> Logout</a></li>
+                                                           {% if user.is_authenticated %}
+                                                                 <li><a href=""><i class="fa fa-user-circle"></i> Profile</a></li>
+                                                                <li><a href="{% url 'password_change' %}"><i class="fa fa-lock"></i> Change Password</a></li>
+                                                                <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Logout</a></li>
+                                                           {% else %}
+                                                                <li><a href="{% url 'login' %}"><i class="fa fa-user-circle"></i> Login</a></li>
+                                                                <li><a href="{% url 'logout' %}"><i class="fa fa-lock"></i> SignUp</a></li>
+                                                           {% endif %}
                                                         </ul>
                                                 </div>
 											</div>

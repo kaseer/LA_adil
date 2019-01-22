@@ -1,0 +1,36 @@
+{% load static %}
+<header>
+		<div class="container-fluid">
+		    <div class="row">
+                <div class="col-3">
+                    <div id="logo_home">
+                        <h1><a href="index.html">MAVIA | Register, Reservation, Questionare, Reviews form wizard</a></h1>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div id="social">
+                        <ul>
+                            <li><a href="#"><i class="icon-facebook"></i></a></li>
+                            <li><a href="#"><i class="icon-twitter"></i></a></li>
+                            <li><a href="#"><i class="icon-google"></i></a></li>
+                            <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- /social -->
+                    <nav>
+                        <ul class="cd-primary-nav">
+                            <li><a href="{% url 'logout' %}" class="animated_link">logout</a></li>
+                            <li><a href="{% url 'password_change' %}" class="animated_link">Password Change</a></li>
+                            <li><a href="{% url 'password_reset' %}" class="animated_link">Reset Password</a></li>
+                            <li><a href="review_version.html" class="animated_link">Review Version</a></li>
+                            <li><a href="about.html" class="animated_link">About Us</a></li>
+                            <li><a href="contacts.html" class="animated_link">Contact Us</a></li>
+                              <li><a href="{% url 'login' %}" class="animated_link">Login</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+		</div>
+		<!-- container -->
+	</header>
+	<!-- End Header -->

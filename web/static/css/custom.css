@@ -1,9 +1,6 @@
-.theme-menu-wrapper.fixed{
-     background-image: linear-gradient(to right, #201362 , #414297) !important;
-}
+
 .bg-wrapper{
     border-radius: 5px !important;
-     background-image: linear-gradient(to right, #201362 , #414297) !important;
 }
 
 .user-profile .dropdown-menu{
