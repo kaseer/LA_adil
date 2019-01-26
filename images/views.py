@@ -4,6 +4,7 @@ from django.contrib import messages
 from .forms import ImageCreateForm
 # Create your views here.
 
+
 @login_required()
 def image_create(request):
     if request.method == 'POST':
@@ -15,7 +16,8 @@ def image_create(request):
             new_item.save()
             messages.success(request, 'Image added successfully')
             return redirect(new_item.get_absolute_url())
-        else:
-            form = ImageCreateForm(data=request.GET)
-
+    else:
+        form = ImageCreateForm(data=request.GET)
+    return render(request, 'images/image/create.html', {'section': 'images', 'form': form})
+#https://stackoverflow.com/questions/43868262/djangobyexample-book-jquery-bookmarklet-not-working-at-all
 

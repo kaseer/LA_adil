@@ -1,4 +1,7 @@
 {% extends 'account_base.html' %}
 {% block account %}
     <h2>WELCOME ACCOUNT</h2>
+    {% with total_images_created=request.user.images_created.count %}
+        <p>Welcome to your dashboard. you have bookmarked {{ total_images_created }} image{{  }}</p>
+    {% endwith %}
 {% endblock %}
