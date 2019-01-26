@@ -1,16 +1,31 @@
 {% extends 'account_base.html' %}
-{% load staticfiles %}
+{% load static %}
 {% load crispy_forms_tags %}
-{% block account %}
-   <div class="container">
-   <h2>LOGIN</h2>
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <button type="submit">login</button>
+{% block title %}Log-in{% endblock %}
+   {% block account %}
+     <h1>Log-in</h1>
+     {% if form.errors %}
+       <p>
+         Your username and password didn't match.
+         Please try again.
+       </p>
+     {% else %}
+       <p>Please, use the following form to log-in. If you don't have an account <a href="{% url "register" %}">register here</a></p>
+     {% endif %}
+     <div class="login-form">
+    <form action="{% url 'login' %}" method="post">
+      {{ form|crispy }}
+      {% csrf_token %}
+      <input type="hidden" name="next" value="{{ next }}" />
+      <p><input type="submit" value="Log-in"></p>
     </form>
-   </div>
-    <br>
-  <p><strong>-- OR --</strong></p>
-  <a href="{% url 'social:begin' 'github' %}">Login with GitHub</a><br>
+    <p><a href="{% url "password_reset" %}">Forgotten your
+   password?</a></p>
+  </div>
+<div class="social">
+     <ul>
+       <li class="github"><a href="{% url "social:begin" "github" %}"> <i class="fab fa-github fa-1x"></i> Sign in with GitHub</a></li>
+</ul>
+</div>
 {% endblock %}
+

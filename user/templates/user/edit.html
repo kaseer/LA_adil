@@ -1,14 +1,13 @@
-{% extends 'account_base.html' %}
-{% load staticfiles %}
-{% load crispy_forms_tags %}
-{% block account %}
-   <div class="container">
-   <h2>Profile Edit</h2>
-    <form  method="post">
-        {{ user_form|crispy }}
-        {{ profile_form|crispy }}
-         {% csrf_token %}
-        <button type="submit">update</button>
-    </form>
-   </div>
+{% extends "account_base.html" %}
+   {% block title %}Edit your account{% endblock %}
+    {% load crispy_forms_tags %}
+    {% block account %}
+     <h1>Edit your account</h1>
+     <p>You can edit your account using the following form:</p>
+     <form action="." method="post" enctype="multipart/form-data">
+       {{ user_form.as_p}}
+       {{ profile_form.as_p }}
+       {% csrf_token %}
+       <p><input type="submit" value="Save changes"></p>
+￼  </form>
 {% endblock %}

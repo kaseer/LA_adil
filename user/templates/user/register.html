@@ -1,0 +1,12 @@
+{% extends "account_base.html" %}
+   {% block title %}Registration{% endblock %}
+   {% load crispy_forms_tags %}
+   {% block account %}
+     <h1>Forgotten your password?</h1>
+     <p>Enter your e-mail address to obtain a new password.</p>
+     <form action="../registration" method="post">
+       {{ user_form|crispy }}
+       <p><input type="submit" value="Send e-mail"></p>
+       {% csrf_token %}
+     </form>
+{% endblock %}

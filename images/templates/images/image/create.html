@@ -1,14 +1,11 @@
-{% extends 'account_base.html' %}
-{% load staticfiles %}
-{% load crispy_forms_tags %}
-{% block account %}
-   <div class="container">
-   <h2>Upload Content</h2>
-       <img src="{{ request.GET.url }}" alt="" width="500" height="500">
-    <form action="." method="post">
-        {{ form|crispy }}
-         {% csrf_token %}
-        <button type="submit">Bookmark !!</button>
-    </form>
-   </div>
-{% endblock %}
+{% extends "account_base.html" %}
+   {% block title %}Bookmark an image{% endblock %}
+   {% block account %}
+     <h1>Bookmark an image</h1>
+     <img src="{{ request.GET.url }}" class="image-preview">
+     <form action="." method="post">
+       {{ form.as_p }}
+       {% csrf_token %}
+       <input type="submit" value="Bookmark it!">
+     </form>
+   {% endblock %}

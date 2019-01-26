@@ -22,7 +22,7 @@ def register(request):
      else:
           user_form = UserRegistrationForm()
 
-     return render(request, 'registration/register.html', {'user_form': user_form})
+     return render(request, 'user/register.html', {'user_form': user_form})
 
 
 

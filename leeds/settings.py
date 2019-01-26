@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'social_django',
     'images',
+    'sorl.thumbnail',
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MIDDLEWARE = [
@@ -64,6 +65,7 @@ TEMPLATES = [
         'DIRS': [
             os.path.join(BASE_DIR, 'web/templates'),
             os.path.join(BASE_DIR, 'user/templates'),
+            os.path.join(BASE_DIR, 'images/templates'),
         ]
         ,
         'APP_DIRS': True,
