@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'web.apps.WebConfig',
     'user.apps.UserConfig',
     'crispy_forms',
+    'social_django',
+    'images',
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MIDDLEWARE = [
@@ -50,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'leeds.urls'
@@ -69,6 +73,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -136,6 +143,7 @@ LOGIN_REDIRECT_URL = reverse_lazy('dashboard')
 LOGIN_URL = reverse_lazy('login')
 LOGOUT_URL = reverse_lazy('logout')
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
@@ -143,3 +151,19 @@ EMAIL_HOST_USER = 'extra.test1990@gmail.com'
 EMAIL_HOST_PASSWORD = 'Q@serkhan!'
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'Leeds Accountants Team <noreply@example.com>'
+
+SOCIAL_AUTH_GITHUB_KEY = '6f93f43363031a732c7e'
+SOCIAL_AUTH_GITHUB_SECRET = '925fb18fa77e61bc42a97e5e38c62edd46dd4148'
+
+#SOCIAL_AUTH_TWITTER_KEY = '9TD12xahCWCDdyLzpmw61GSM9'
+#SOCIAL_AUTH_TWITTER_SECRET = 'mwtdcUe4uOvvJjDk2AuQ9Mq2xiHPw3740m5iGLf6hwg3B4TNSx'
+
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.facebook.FacebookOAuth2',
+
+    'django.contrib.auth.backends.ModelBackend',
+    'user.authentication.EmailAuthBackend',
+)

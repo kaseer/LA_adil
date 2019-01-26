@@ -1,0 +1,14 @@
+{% extends 'account_base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block account %}
+   <div class="container">
+   <h2>Profile Edit</h2>
+    <form  method="post">
+        {{ user_form|crispy }}
+        {{ profile_form|crispy }}
+         {% csrf_token %}
+        <button type="submit">update</button>
+    </form>
+   </div>
+{% endblock %}
