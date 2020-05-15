@@ -1054,9 +1054,6 @@ body .theme-button-one:hover {background:#000f32; }
 }
 /*------------------- About Company Stye Two -------------------*/
 .about-compnay-two {
-  background: url(../images/home/11.jpg) no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
   background-color: #707d9e;
 }
 .about-compnay-two .overlay {background: rgba(0,26,87,0.8);padding: 100px 0;}
@@ -2049,3 +2046,4 @@ body .theme-button-one:hover {background:#000f32; }
   padding: 0 20px;
   border:1px solid #f0f0f0;
 }
+

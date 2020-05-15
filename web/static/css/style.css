@@ -576,7 +576,7 @@ body .theme-button-one:hover {background:#000f32; }
 }
 /*------------------ Feature Banner ---------------*/
 .feature-banner {
-  background: url(../images/home/2.jpg) no-repeat center center;
+  background: url(../images/about.jpg) no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   background-color: #707d9e;
@@ -2052,3 +2052,4 @@ body .theme-button-one:hover {background:#000f32; }
   padding: 0 20px;
   border:1px solid #f0f0f0;
 }
+
